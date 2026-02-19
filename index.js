@@ -1,6 +1,11 @@
+
 let p=document.querySelector("body");
 let c=document.querySelector("h1");
 let r="red";
+c.addEventListener("click",()=>{
+    c.innerHTML="Hello World";
+}
+    )
 let abc=()=>{
     if(r== "red"){
         p.style.backgroundColor="red";
@@ -13,7 +18,5 @@ let abc=()=>{
     }
     
 a.addEventListener("click",abc)
-c.addEventListener("click",()=>{
-    c.innerHTML="Hello World";
-}
-    )
+
+    
