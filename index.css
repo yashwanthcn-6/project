@@ -75,7 +75,11 @@
 
 
 
-
+.cont{
+    background-color: red;
+    height: 100px;
+     text-align: center;
+}
 
 .main{
     margin: 20px;
