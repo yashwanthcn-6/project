@@ -14,7 +14,7 @@ const winner = [
 
 
 let b=document.querySelector("body");
-let h1=document.querySelector("h1");
+let h2=document.querySelector("h2");
 
 let a=document.querySelector("button")
 
@@ -26,7 +26,7 @@ let change="x";
         on.addEventListener("click", () => {
             let p = on.querySelector("p.res");
             
-            // if cell already has content (x or 0), freeze it - don't change
+            
             if(p.textContent !== "") return;
             
                  if(change == "x"){
@@ -38,20 +38,35 @@ let change="x";
                     change="x";
                  }
                  
-                checkwinner();
+               checkwinner();
+
         });
         })
-    
-const checkwinner=()=>{
+        
+
+       let checkwinner=()=>{
     for(let pattern of winner){
+       
+        
+            let a=conts[pattern[0]].textContent;
+            let b=conts[pattern[1]].textContent;
+            let c=conts[pattern[2]].textContent;
+            
+    
 
-        console.log(pattern[0],pattern[1],pattern[2]);
-         console.log(winner[pattern[0]],winner[pattern[1]],winner[pattern[2]]);
-          console.log(
-            conts[pattern[0]].textContent,
-            conts[pattern[1]].textContent,
-            conts[pattern[2]].textContent
-        );
-    }
+    
+    if(a !=="" && b !=="" && c !==""){
+        if(a === b && b === c){
+            
+            h2.textContent=`winner is ${a}`;
+           }
+            }}};
 
-    }
+      
+        
+
+
+            
+            
+                  
+    
