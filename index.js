@@ -26,7 +26,6 @@ let change="x";
         on.addEventListener("click", () => {
             let p = on.querySelector("p.res");
             
-            
             if(p.textContent !== "") return;
             
                  if(change == "x"){
@@ -39,9 +38,9 @@ let change="x";
                  }
                  
                checkwinner();
-
         });
         })
+    
         
 
        let checkwinner=()=>{
@@ -59,6 +58,7 @@ let change="x";
         if(a === b && b === c){
             
             h2.textContent=`winner is ${a}`;
+            return 0;
            }
             }}};
 
