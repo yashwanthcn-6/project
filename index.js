@@ -1,6 +1,7 @@
 let row1=document.querySelector(".sub1");
 let row2=document.querySelector(".sub2");
 let row3=document.querySelector(".sub3");
+let t=document.querySelector("h4");
 const winner = [
     [0, 1, 2],
     [0, 3, 6],
@@ -11,6 +12,22 @@ const winner = [
     [3, 4, 5],
     [6, 7, 8]
 ];
+let count=7;
+function timer(){
+    count--;
+    console.log(count);
+    t.textContent = `Time: ${count}`;
+
+}
+let yy=setInterval(function(){
+    timer();
+    if(count === 0){
+        clearTimeout(yy);
+        t.textContent = "Time is up";
+    }
+}, 1000);
+
+
 
 
 let b=document.querySelector("body");
@@ -20,7 +37,8 @@ let a=document.querySelector("button")
 
 let conts=document.querySelectorAll(".cont");
 let change="x";
-
+let o=document.querySelector("#zero");
+let x=document.querySelector("#xone");
     conts.forEach((on) => {
         
         on.addEventListener("click", () => {
@@ -31,10 +49,19 @@ let change="x";
                  if(change == "x"){
                     p.textContent = "x";
                       change="0";
+                      o.textContent="its turn for the player 0";
+                      x.textContent="";
+                     
+                      
+
                  }
                  else{
                     p.textContent = "0";
                     change="x";
+                    x.textContent="its turn for the player x";
+                    o.textContent="";
+                    
+                    
                  }
                  
                checkwinner();
